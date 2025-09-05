@@ -1,0 +1,89 @@
+---
+layout: default
+title: "Home"
+description: "Welcome to the Global Cisco U. | NetAcad Workshop - your hub for networking education resources"
+---
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ site.workshop.name }}</h1>
+            <p class="hero-description">{{ site.workshop.description }}</p>
+            
+            <div class="workshop-details">
+                <div class="detail-item">
+                    <h3>📅 Date</h3>
+                    <p>{{ site.workshop.date }}</p>
+                </div>
+                <div class="detail-item">
+                    <h3>🌍 Location</h3>
+                    <p>{{ site.workshop.location }}</p>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="{{ '/agenda/' | relative_url }}" class="btn btn-primary">View Agenda</a>
+                <a href="{{ '/resources/' | relative_url }}" class="btn btn-secondary">Get Resources</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>What You'll Find Here</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Workshop Agenda</h3>
+                <p>Detailed schedule with session topics, timing, and learning objectives for the entire workshop.</p>
+                <a href="{{ '/agenda/' | relative_url }}" class="feature-link">View Agenda →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Instructor Resources</h3>
+                <p>Slides, lab guides, code samples, and interactive Miro boards for hands-on learning experiences.</p>
+                <a href="{{ '/resources/' | relative_url }}" class="feature-link">Access Resources →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Feedback & Support</h3>
+                <p>Share your thoughts, ask questions, and help us improve future workshop experiences.</p>
+                <a href="{{ '/feedback/' | relative_url }}" class="feature-link">Give Feedback →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">❓</div>
+                <h3>Contact & FAQs</h3>
+                <p>Get answers to common questions and connect with our workshop organizers and instructors.</p>
+                <a href="{{ '/contact/' | relative_url }}" class="feature-link">Get Help →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+        <div class="about-content">
+            <h2>About This Workshop</h2>
+            <p>This comprehensive workshop brings together the expertise of Cisco U. and NetAcad to deliver cutting-edge networking education. Whether you're an instructor looking to enhance your curriculum or a learner seeking to advance your networking skills, you'll find valuable resources and insights here.</p>
+            
+            <div class="highlights">
+                <div class="highlight">
+                    <strong>Expert-Led Sessions</strong>
+                    <p>Learn from industry professionals and certified instructors</p>
+                </div>
+                <div class="highlight">
+                    <strong>Hands-On Labs</strong>
+                    <p>Practice with real-world scenarios and equipment</p>
+                </div>
+                <div class="highlight">
+                    <strong>Interactive Learning</strong>
+                    <p>Engage with collaborative tools and peer discussions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+# Site settings
+title: "Cisco U. | NetAcad Workshop"
+description: "Global workshop materials and resources for Cisco networking education"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourusername.github.io" # Update with your GitHub username
+
+# Workshop details - customize these
+workshop:
+  name: "Global Cisco U. | NetAcad Workshop"
+  description: "Comprehensive networking education workshop covering latest Cisco technologies and NetAcad curriculum"
+  date: "TBD - Update in _config.yml"
+  location: "Global Virtual Event"
+  
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Agenda"
+    url: "/agenda/"
+  - title: "Instructor Resources"
+    url: "/resources/"
+  - title: "Feedback"
+    url: "/feedback/"
+  - title: "Contact & FAQs"
+    url: "/contact/"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

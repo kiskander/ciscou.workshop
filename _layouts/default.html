@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="{{ '/' | relative_url }}">
+                        <h1>{{ site.workshop.name }}</h1>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Navigation -->
+                <nav class="main-nav">
+                    <ul>
+                        {% for nav_item in site.navigation %}
+                        <li>
+                            <a href="{{ nav_item.url | relative_url }}" 
+                               {% if page.url == nav_item.url %}class="active"{% endif %}>
+                                {{ nav_item.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-branding">
+                    <p><strong>Brought to you by Cisco U. and NetAcad</strong></p>
+                    <p>Empowering the next generation of network professionals</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.cisco.com" target="_blank">Cisco.com</a>
+                    <a href="https://www.netacad.com" target="_blank">NetAcad</a>
+                    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ 'now' | date: "%Y" }} Cisco Systems, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMobileMenu() {
+            const nav = document.querySelector('.main-nav');
+            const btn = document.querySelector('.mobile-menu-btn');
+            nav.classList.toggle('active');
+            btn.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.main-nav');
+            const btn = document.querySelector('.mobile-menu-btn');
+            const header = document.querySelector('.site-header');
+            
+            if (!header.contains(event.target)) {
+                nav.classList.remove('active');
+                btn.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.querySelector('.main-nav').classList.remove('active');
+                document.querySelector('.mobile-menu-btn').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+# Cisco Network Troubleshooting Commands Reference
+
+## Basic Connectivity
+ping <ip_address>                    # Test basic connectivity
+traceroute <ip_address>              # Trace packet path
+telnet <ip_address> <port>           # Test specific port connectivity
+
+## Interface Information
+show interfaces                      # Display all interface status
+show interfaces brief               # Brief interface summary
+show ip interface brief             # IP interface summary
+show interfaces <interface>         # Specific interface details
+
+## Routing Information
+show ip route                       # Display routing table
+show ip route summary               # Routing table summary
+show ip protocols                   # Routing protocol information
+show ip ospf neighbor               # OSPF neighbor information
+show ip eigrp neighbors             # EIGRP neighbor information
+
+## VLAN and Switching
+show vlan brief                     # VLAN summary
+show interfaces trunk               # Trunk port information
+show spanning-tree                  # Spanning tree information
+show mac address-table              # MAC address table
+
+## Configuration
+show running-config                 # Current configuration
+show startup-config                 # Saved configuration
+show version                        # System version information
+show inventory                      # Hardware inventory
+
+## Security
+show access-lists                   # Access control lists
+show ip nat translations            # NAT translation table
+show crypto isakmp sa               # IPSec security associations
+
+## Debugging (Use with caution)
+debug ip packet                     # Debug IP packets
+debug ip routing                    # Debug routing updates
+debug spanning-tree events          # Debug STP events
+
+## Log Information
+show logging                        # System log messages
+show logging history                # Historical log events
+
+## Performance Monitoring
+show processes cpu                  # CPU utilization
+show memory                         # Memory usage
+show environment                    # Environmental status
+
+## Quick Diagnostics
+show tech-support                   # Comprehensive system info
+show cdp neighbors                  # CDP neighbor information
+show lldp neighbors                 # LLDP neighbor information
+
+## Configuration Management
+copy running-config startup-config  # Save configuration
+write memory                        # Alternative save command
+reload                              # Restart device
+configure terminal                  # Enter configuration mode
+
+## Note: Always use appropriate privilege levels and be cautious with debug commands in production environments.
