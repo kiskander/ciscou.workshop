@@ -39,7 +39,7 @@ Edit `_config.yml` to customize your workshop:
 # Site settings
 title: "Your Workshop Title"
 description: "Workshop description"
-url: "https://yourusername.github.io/repository-name"
+url: "https://yourusername.github.io/ciscou.workshop"
 
 # Workshop details
 workshop:
@@ -117,8 +117,8 @@ The site is fully responsive and mobile-friendly. Test on various devices and sc
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/repository-name.git
-   cd repository-name
+   git clone https://github.com/yourusername/ciscou.workshop.git
+   cd ciscou.workshop
    ```
 
 2. Install dependencies:

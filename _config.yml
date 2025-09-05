@@ -2,7 +2,7 @@
 title: "Cisco U. | NetAcad Workshop"
 description: "Global workshop materials and resources for Cisco networking education"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourusername.github.io" # Update with your GitHub username
+url: "https://yourusername.github.io/ciscou.workshop" # Update with your GitHub username
 
 # Workshop details - customize these
 workshop:
